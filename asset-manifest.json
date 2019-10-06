@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/MillionaireQuiz/static/css/main.00a3a318.chunk.css",
-    "main.js": "/MillionaireQuiz/static/js/main.99fe736d.chunk.js",
-    "main.js.map": "/MillionaireQuiz/static/js/main.99fe736d.chunk.js.map",
+    "main.css": "/MillionaireQuiz/static/css/main.2a9dd9ea.chunk.css",
+    "main.js": "/MillionaireQuiz/static/js/main.caae4ff5.chunk.js",
+    "main.js.map": "/MillionaireQuiz/static/js/main.caae4ff5.chunk.js.map",
     "runtime-main.js": "/MillionaireQuiz/static/js/runtime-main.fa28a9dd.js",
     "runtime-main.js.map": "/MillionaireQuiz/static/js/runtime-main.fa28a9dd.js.map",
-    "static/js/2.7eea6073.chunk.js": "/MillionaireQuiz/static/js/2.7eea6073.chunk.js",
-    "static/js/2.7eea6073.chunk.js.map": "/MillionaireQuiz/static/js/2.7eea6073.chunk.js.map",
+    "static/js/2.d5090153.chunk.js": "/MillionaireQuiz/static/js/2.d5090153.chunk.js",
+    "static/js/2.d5090153.chunk.js.map": "/MillionaireQuiz/static/js/2.d5090153.chunk.js.map",
     "index.html": "/MillionaireQuiz/index.html",
-    "precache-manifest.2d841038ef88af8c3d149633e6dbb01d.js": "/MillionaireQuiz/precache-manifest.2d841038ef88af8c3d149633e6dbb01d.js",
+    "precache-manifest.329e4935d361eac76231f35d5b7b2116.js": "/MillionaireQuiz/precache-manifest.329e4935d361eac76231f35d5b7b2116.js",
     "service-worker.js": "/MillionaireQuiz/service-worker.js",
-    "static/css/main.00a3a318.chunk.css.map": "/MillionaireQuiz/static/css/main.00a3a318.chunk.css.map",
+    "static/css/main.2a9dd9ea.chunk.css.map": "/MillionaireQuiz/static/css/main.2a9dd9ea.chunk.css.map",
     "static/media/Audience.module.css": "/MillionaireQuiz/static/media/audience.b187224b.png",
     "static/media/Elimination.module.css": "/MillionaireQuiz/static/media/elimination.59c71e31.png",
     "static/media/FriendCall.module.css": "/MillionaireQuiz/static/media/friend.8af91c80.png",
-    "static/media/StateContainer.module.css": "/MillionaireQuiz/static/media/logo.75afdee5.png",
+    "static/media/GameGenerator.module.css": "/MillionaireQuiz/static/media/logo.75afdee5.png",
     "static/media/Modal.module.css": "/MillionaireQuiz/static/media/modal.ff325826.jpg"
   }
 }

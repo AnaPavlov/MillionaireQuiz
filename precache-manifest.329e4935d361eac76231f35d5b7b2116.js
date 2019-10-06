@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "901892c7a01ac595a158b6c93f53a2ac",
+    "revision": "c615b681ae2bf5ddbfe4e6f55c8528c1",
     "url": "/MillionaireQuiz/index.html"
   },
   {
-    "revision": "f28e50bd206646988bee",
-    "url": "/MillionaireQuiz/static/css/main.00a3a318.chunk.css"
+    "revision": "9ac8b702a359d57b1c96",
+    "url": "/MillionaireQuiz/static/css/main.2a9dd9ea.chunk.css"
   },
   {
-    "revision": "6318fa855d1747374803",
-    "url": "/MillionaireQuiz/static/js/2.7eea6073.chunk.js"
+    "revision": "2ab339f96523b8917910",
+    "url": "/MillionaireQuiz/static/js/2.d5090153.chunk.js"
   },
   {
-    "revision": "f28e50bd206646988bee",
-    "url": "/MillionaireQuiz/static/js/main.99fe736d.chunk.js"
+    "revision": "9ac8b702a359d57b1c96",
+    "url": "/MillionaireQuiz/static/js/main.caae4ff5.chunk.js"
   },
   {
     "revision": "5a86f9e251a77d21b380",
