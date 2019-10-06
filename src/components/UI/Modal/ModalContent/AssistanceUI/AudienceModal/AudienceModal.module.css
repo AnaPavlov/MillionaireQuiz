@@ -1,0 +1,51 @@
+.Audience {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Chart {
+  background-color: black;
+  width: 50%;
+  min-width: 300px;
+  height: 80%;
+  border-bottom: 3px solid black;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.Chart div {
+  width: 40px;
+}
+
+.Chart div:nth-child(1) {
+  background: green;
+}
+
+.Chart div:nth-child(2) {
+  background: red;
+}
+
+.Chart div:nth-child(3) {
+  background: yellow;
+}
+
+.Chart div:nth-child(4) {
+  background: blue;
+}
+
+.Labels {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Labels p {
+  width: 30px;
+  margin: 0;
+  text-align: center;
+  color: orange;
+}

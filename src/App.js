@@ -1,11 +1,11 @@
 import React from 'react';
 
-import StateContainer from './containers/StateContainer/StateContainer';
+import GameGenerator from './containers/GameGenerator/GameGenerator';
 
 function App() {
   return (
     <div>
-     <StateContainer />
+      <GameGenerator />
     </div>
   );
 }

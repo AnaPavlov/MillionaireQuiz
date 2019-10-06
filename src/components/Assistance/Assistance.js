@@ -6,13 +6,22 @@ import Elimination from './Elimination/Elimination';
 import FriendCall from './FriendCall/FriendCall';
 
 const assistance = props => {
-    return (
+  return (
     <div className={styles.Assistance}>
-        <Audience showAudience={props.showAudience} disabled={props.usedAssistance.audience} />
-        <FriendCall showFriendCall={props.showFriendCall} disabled={props.usedAssistance.friendCall} />
-        <Elimination showElimination={props.showElimination} disabled={props.usedAssistance.elimination} />
+      <Audience
+        showAudience={props.showAudience}
+        disabled={props.usedAssistance.audience}
+      />
+      <FriendCall
+        showFriendCall={props.showFriendCall}
+        disabled={props.usedAssistance.friendCall}
+      />
+      <Elimination
+        showElimination={props.showElimination}
+        disabled={props.usedAssistance.elimination}
+      />
     </div>
-    );
-}
+  );
+};
 
-export default assistance
+export default assistance;

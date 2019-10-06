@@ -9,33 +9,34 @@ class Answers extends Component {
   };
 
   componentDidUpdate() {
+    //wait 2 sec to enable answers, because we have setTimeout function on checking the correctness of answer
     if (this.state.disabled === false) {
       return;
     }
-    const change = () => {
+    const enableAnswers = () => {
       this.setState({
         disabled: false
       });
     };
-    setTimeout(change, 2000);
+    setTimeout(enableAnswers, 2000);
   }
 
-  toggleDisable = () => {
+  dissableAnswers = () => {
     this.setState({
       disabled: true
     });
   };
 
   render() {
-    const answerOrder = ['A', 'B', 'C', 'D'];
+    const answersOrder = ['A', 'B', 'C', 'D'];
 
     let answer = this.props.answers.map((answ, index) => {
       return (
         <Answer
           answerContent={answ}
-          answerOrder={answerOrder[index]}
+          answerOrder={answersOrder[index]}
           disabled={this.state.disabled}
-          toggleDisable={this.toggleDisable}
+          dissableAnswers={this.dissableAnswers}
           click={this.props.answerClick.bind(this, index)}
           key={answ}
           correctAnswer={this.props.correctAnswer}
@@ -45,10 +46,9 @@ class Answers extends Component {
 
     //in case elimination assistance is required, hide two answers
     if (this.props.isEliminationActive) {
-      let indexArray = [0, 1, 2, 3];
+      const indexArray = [0, 1, 2, 3];
       indexArray.splice(this.props.correctIndex, 1);
       let randomIndex = indexArray[Math.floor(Math.random() * 3)];
-      console.log(randomIndex);
 
       answer = this.props.answers.map((answ, index) => {
         let hide =
@@ -58,9 +58,9 @@ class Answers extends Component {
         return (
           <Answer
             answerContent={answ}
-            answerOrder={answerOrder[index]}
+            answerOrder={answersOrder[index]}
             disabled={this.state.disabled}
-            toggleDisable={this.toggleDisable}
+            dissableAnswers={this.dissableAnswers}
             click={this.props.answerClick.bind(this, index)}
             hide={hide}
             key={answ}

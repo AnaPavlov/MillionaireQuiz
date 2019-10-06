@@ -1,0 +1,17 @@
+.FriendModal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.span {
+  display: block;
+  width: 100%;
+  color: #e1a02e;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
