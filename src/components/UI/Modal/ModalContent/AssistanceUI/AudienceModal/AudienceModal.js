@@ -1,36 +1,62 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import styles from './AudienceModal.module.css';
 
-const audienceModal = props => {
-  const answersOrder = ['A', 'B', 'C', 'D'];
-  let barHeight;
-  let barHeightCorrect;
+class AudienceModal extends Component {
+  render() {
+    const answersOrder = ['A', 'B', 'C', 'D'];
+    let randomPercentages = [];
 
-  const chartBars = answersOrder.map((answer, index) => {
-    barHeight = Math.floor(Math.random() * 80);
-    barHeightCorrect = Math.floor(Math.random() * (100 - 80 + 1)) + 80;
+    function getRandomPercentages() {
+      let total = 100;
+      for (let i = 0; i < 4; i++) {
+        if (i === 0) {
+          randomPercentages.push(
+            Math.floor(Math.random() * (100 - 50 + 1)) + 50
+          );
+          total -= randomPercentages[i];
+        } else if (i === 3) {
+          randomPercentages.push(total);
+        } else {
+          randomPercentages.push(Math.floor(Math.random() * total));
+          total -= randomPercentages[i];
+        }
+      }
+    }
 
-    return props.correctIndex === index ? (
-      <div key={answer} style={{ height: barHeightCorrect + '%' }}></div>
-    ) : (
-      <div key={answer} style={{ height: barHeight + '%' }}></div>
-    );
-  });
+    //swap places, so that in the place of the correct index is value of a highest percentage
+    const swapIndexes = () => {
+      getRandomPercentages();
+      [randomPercentages[0], randomPercentages[this.props.correctIndex]] = [
+        randomPercentages[this.props.correctIndex],
+        randomPercentages[0]
+      ];
+    };
+    swapIndexes();
 
-  return (
-    <div className={styles.Audience}>
-      <h2>Hall assistance:</h2>
-      <div className={styles.Percentes}></div>
-      <div className={styles.Chart}>{chartBars}</div>
-      <div className={styles.Labels}>
-        <p>A</p>
-        <p>B</p>
-        <p>C</p>
-        <p>D</p>
+    const chartBars = answersOrder.map((answer, index) => {
+      return (
+        <div
+          key={answer}
+          style={{ height: randomPercentages[index] + '%' }}
+        ></div>
+      );
+    });
+
+    return (
+      <div className={styles.Audience}>
+        <h2>Hall assistance:</h2>
+        <div className={styles.Percentes}></div>
+        <div className={styles.Chart}>{chartBars}</div>
+        <div className={styles.Labels}>
+          <p>A</p>
+          <p>B</p>
+          <p>C</p>
+          <p>D</p>
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default audienceModal;
+export default AudienceModal;
