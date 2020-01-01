@@ -16,6 +16,7 @@ class StateContainer extends Component {
     progress: 0,
     modalContent: null,
     isEliminationRequired: false,
+    isGameActive: false,
     usedAssistance: {
       audience: false,
       friendCall: false,
@@ -50,7 +51,8 @@ class StateContainer extends Component {
       questionsSet = 'questionsSet' + randNum.toString();
     this.setState({
       questionsSet: QuestionsData[questionsSet],
-      modalContent: null
+      modalContent: null,
+      isGameActive: true
     });
   };
 
@@ -60,6 +62,7 @@ class StateContainer extends Component {
       progress: 0,
       modalContent: null,
       isEliminationRequired: false,
+      isGameActive: false,
       usedAssistance: {
         audience: false,
         friendCall: false,
@@ -69,6 +72,9 @@ class StateContainer extends Component {
   };
 
   answerHandler = index => {
+    if (!this.state.isGameActive) {
+      return;
+    }
     const correctIndex = this.state.questionsSet[this.state.progress].correct;
 
     const correctAnswer = () => {
@@ -99,6 +105,9 @@ class StateContainer extends Component {
   };
 
   handleAudience = () => {
+    if (!this.state.isGameActive) {
+      return;
+    }
     const usedAssistance = { ...this.state.usedAssistance };
     usedAssistance.audience = true;
     this.setState({
@@ -108,6 +117,9 @@ class StateContainer extends Component {
   };
 
   handleFriendCall = () => {
+    if (!this.state.isGameActive) {
+      return;
+    }
     const usedAssistance = { ...this.state.usedAssistance };
     usedAssistance.friendCall = true;
     this.setState({
@@ -117,6 +129,9 @@ class StateContainer extends Component {
   };
 
   handleElimination = () => {
+    if (!this.state.isGameActive) {
+      return;
+    }
     const usedAssistance = { ...this.state.usedAssistance };
     usedAssistance.elimination = true;
     this.setState({
@@ -156,6 +171,7 @@ class StateContainer extends Component {
             <Answers
               answers={answers}
               answerClick={index => this.answerHandler(index)}
+              isGameActive={this.state.isGameActive}
               correctAnswer={correctAnswer}
               correctIndex={
                 this.state.questionsSet[this.state.progress].correct

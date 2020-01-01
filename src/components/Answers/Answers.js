@@ -5,7 +5,7 @@ import Answer from './Answer/Answer';
 
 class Answers extends Component {
   state = {
-    disabled: false
+    disabled: false,
   };
 
   componentDidUpdate() {
@@ -13,6 +13,7 @@ class Answers extends Component {
     if (this.state.disabled === false) {
       return;
     }
+
     const enableAnswers = () => {
       this.setState({
         disabled: false
@@ -27,7 +28,7 @@ class Answers extends Component {
     });
   };
 
-  render() {
+  render(props) {
     const answersOrder = ['A', 'B', 'C', 'D'];
 
     let answer = this.props.answers.map((answ, index) => {
@@ -35,6 +36,7 @@ class Answers extends Component {
         <Answer
           answerContent={answ}
           answerOrder={answersOrder[index]}
+          isGameActive={this.props.isGameActive}
           disabled={this.state.disabled}
           dissableAnswers={this.dissableAnswers}
           click={this.props.answerClick.bind(this, index)}
