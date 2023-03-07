@@ -67,6 +67,7 @@ class Answers extends Component {
             hide={hide}
             key={answ}
             correctAnswer={this.props.correctAnswer}
+            isGameActive={this.props.isGameActive}
           />
         );
       });
